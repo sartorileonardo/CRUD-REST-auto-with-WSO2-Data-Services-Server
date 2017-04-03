@@ -15,7 +15,7 @@ Obs: Verificar se as variáveis de ambiente Java Oracle 7 estão previamente con
 2- Executar  no diretório "/bin" o arquivo "wso2server.sh" se o SO for Linux ou "wso2server.bat" para SO Windows.
 3- Criar um Banco de Dados em MySQL conforme Script "Script_Create_Database.sql".
 4- Se a ferramenta foi executada com sucesso, irá exibir algo como: 
-"[2017-04-03 11:08:15,957]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://10.0.0.104:9443/carbon/"
+"[2017-04-03 11:08:15,957]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://localhost:9443/carbon/"
 5- Acesse esse endereço pelo browser Chrome ou Firefox e entre com o usuário e senha padrão "admin".
 6- Adicione o link na excessão de segurança, caso o browser solicitar.
 7- Acesse o caminho de menu Configurações > Datasources > Add Datasources.
