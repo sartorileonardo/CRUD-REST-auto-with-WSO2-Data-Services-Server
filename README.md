@@ -39,9 +39,9 @@ Note: Verify that the Oracle 7 Java environment variables are preconfigured (JAV
 
 > URL: jdbc: mysql: // localhost: 3306 / control_product_db
 
-> User Name: <bank user>
+> User Name: "database user"
 
-> Password: <bank password>
+> Password: "database password"
 
 10- Click the "Test Connection" button, if the tool shows the message "Connection is healthy", you have done everything correctly and the tool already has a connection to the DB.
 
