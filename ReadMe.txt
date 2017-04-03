@@ -15,7 +15,7 @@ Note: Verify that the Oracle 7 Java environment variables are preconfigured (JAV
 2- Run the "wso2server.sh" file in the "/ bin" directory if the OS is Linux or "wso2server.bat" for Windows OS.
 3- Create a Database in MySQL as Script "Script_Create_Database.sql".
 4- If the tool was successfully executed, it will display something like:
-"[2017-04-03 11: 08: 15,957] INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} - Mgt Console URL: https://10.0.0.104:9443/carbon/"
+"[2017-04-03 11: 08: 15,957] INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} - Mgt Console URL: https://localhost:9443/carbon/"
 5- Access this address through the Chrome browser or Firefox and enter the default user and password "admin".
 6- Add the link in the security exception if the browser asks for it.
 7- Access the menu path Settings> Datasources> Add Datasources.
