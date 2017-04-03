@@ -82,7 +82,6 @@ In Service Generation, select the option of "Single Service", that is a service 
 
 19- After choosing the insert operation for example, you must complete the values ​​inside the XML tags, such as the insert option:
 
-====================================================================== ============
 <Body>
    <P: insert_product_operation xmlns: p = "ProductService">
       <! - Exactly 1 occurrence ->
@@ -101,7 +100,7 @@ In Service Generation, select the option of "Single Service", that is a service 
       <P: is_created> 1 </ p: is_created>
    </ P: insert_product_operation>
 </ Body>
-====================================================================== ================
+
 20- After filling the data in the XML interface, you must click the "Send" button to perform the operation.
 
 21- Finish !!!
