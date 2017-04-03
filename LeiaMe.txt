@@ -1,0 +1,80 @@
+O Servidor de Serviços de Dados WSO2 simplifica os esforços de desenvolvimento de arquitetura orientada a serviços ao fornecer uma plataforma fácil de usar para integrar armazenamentos de dados, criar exibições de dados compostos e hospedar serviços de dados. Ele suporta acesso a dados seguros e gerenciados através de armazenamentos de dados federados, transações de serviços de dados e transformação e validação de dados usando uma abordagem de desenvolvimento ágil, ágil e amigável ao desenvolvedor. Fornece suporte de federação, combinando dados de várias fontes em resposta única ou recurso e também suporta consultas aninhadas entre fontes de dados.
+
+Mais informações do produto WSO2 DSS no endereço: https://docs.wso2.com/display/DSS322/Downloading+the+Product
+
+Nessa experiência foi criado um CRUD utilizando WSO2 DSS + MySQL Database.
+
+Em poucos minutos é possível criad o CRUD BeckEnd com a ferramenta.
+
+Segue passo a passo para o desenvolvimento da experiência:
+
+Obs: Verificar se as variáveis de ambiente Java Oracle 7 estão previamente configuradas (JAVA_HOME).
+
+1- Download de WSO2 DSS e descompactar.
+2- Copie uma lib JDBC MySql(mysql-connector-java-5.1.40.zip) dentro do caminho "repository/components/lib" da ferramente WSO2 DSS.
+2- Executar  no diretório "/bin" o arquivo "wso2server.sh" se o SO for Linux ou "wso2server.bat" para SO Windows.
+3- Criar um Banco de Dados em MySQL conforme Script "Script_Create_Database.sql".
+4- Se a ferramenta foi executada com sucesso, irá exibir algo como: 
+"[2017-04-03 11:08:15,957]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://10.0.0.104:9443/carbon/"
+5- Acesse esse endereço pelo browser Chrome ou Firefox e entre com o usuário e senha padrão "admin".
+6- Adicione o link na excessão de segurança, caso o browser solicitar.
+7- Acesse o caminho de menu Configurações > Datasources > Add Datasources.
+8- Preencha o formulário com os dados:
+> Datasource Type: RDBMS
+> Name: control_product_db
+> Database Engine: MySQL
+> Driver: com.mysql.jdbc.Driver
+> URL: jdbc:mysql://localhost:3306/control_product_db
+> User Name: <usuário do banco>
+> Password: <senha do banco>
+9- Clique no botão "Test Connection", se a ferramente mostrar a mensagem: "Connection is healthy", você fez tudo corretamente e a ferramenta já possui conexão com o BD;
+10- Acesse o caminho de menu Main > Generate e preencha os dados:
+> Carbon Datasource(s): control_product_db
+> Database Name: control_product_db
+11- Clique no botão "Next".
+12- Logo a ferramente irá exibir a tabela em que será realizado o CRUD, mantenha marcado a tabela "product" e clique em "Next".
+12- Em Service Generation, selecione a opção de "Single Service", ou seja um serviço para CRUD de todas a tabela, visto que só temos a tabela product.
+13- Preencha os dados com:
+> Data Service Namespace: ProductService
+> Data Service Name: ProductService
+14- Clique em "Next"
+15- A ferramenta irá retornar a informação: "Following Service(s) are Deployed Sucessfully" ProductService.
+16- Clique em "Finish" e após 30 segundos acesse o menu Main > Services > List, onde você verá ProductService criado.
+17- Clicando na opção "Try this service", a ferramenta irá abrir uma nova guia no browser com uma interface gráfica (FrontEnd) com as opções de: 
+> delete_product_operation
+> insert_product_operation
+> select_all_product_operation
+> select_with_key_product_operation
+> update_product_operation
+18- Após escolher a operação de insert por exemplo, você deverá completar os valores dentro das tags XML, como por exemplo na opção de insert:
+
+==============================================================
+<body>
+   <p:insert_product_operation xmlns:p="ProductService">
+      <!--Exactly 1 occurrence-->
+      <p:product_name>Caneta</p:product_name>
+      <!--Exactly 1 occurrence-->
+      <p:product_price>1.00</p:product_price>
+      <!--Exactly 1 occurrence-->
+      <p:product_description>Caneta BIC</p:product_description>
+      <!--Exactly 1 occurrence-->
+      <p:product_amount>1</p:product_amount>
+      <!--Exactly 1 occurrence-->
+      <p:product_date_created>2017-04-03</p:product_date_created>
+      <!--Exactly 1 occurrence-->
+      <p:is_active>1</p:is_active>
+      <!--Exactly 1 occurrence-->
+      <p:is_created>1</p:is_created>
+   </p:insert_product_operation>
+</body>
+==================================================================
+19- Após preencher os dados na interface XML, você deve clicar no botão "Send" para realizar a operação.
+
+20- Finish!!!
+
+Para fazer o Download do CRUD WSO2 DSS + MySQL desse laboratório, acesse o link: https://goo.gl/PqL2zm
+
+
+
+
+
