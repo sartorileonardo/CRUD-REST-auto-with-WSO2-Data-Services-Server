@@ -28,18 +28,27 @@ Note: Verify that the Oracle 7 Java environment variables are preconfigured (JAV
 8- Access the menu path Settings> Datasources> Add Datasources.
 
 9- Fill in the form with the data:
+
 > Datasource Type: RDBMS
+
 > Name: control_product_db
+
 > Database Engine: MySQL
+
 > Driver: com.mysql.jdbc.Driver
+
 > URL: jdbc: mysql: // localhost: 3306 / control_product_db
+
 > User Name: <bank user>
+
 > Password: <bank password>
 
 10- Click the "Test Connection" button, if the tool shows the message "Connection is healthy", you have done everything correctly and the tool already has a connection to the DB.
 
 11- Access the Main> Generate menu path and fill in the data:
+
 > Carbon Datasource (s): control_product_db
+
 > Database Name: control_product_db
 
 12- Click the "Next" button.
@@ -48,8 +57,11 @@ Note: Verify that the Oracle 7 Java environment variables are preconfigured (JAV
 In Service Generation, select the option of "Single Service", that is a service for CRUD of all the table, since we only have the table product.
 
 14- Fill in the data with:
+
 > Data Service Namespace: ProductService
+
 > Data Service Name: ProductService
+
 15- Click "Next".
 
 16- The tool will return the information: "Following Service (s) are Deployed Sucessfully" ProductService.
@@ -57,10 +69,15 @@ In Service Generation, select the option of "Single Service", that is a service 
 17- Click "Finish" and after 30 seconds, access the Main> Services> List menu, where you will see ProductService created.
 
 18- Clicking the "Try this service" option, the tool will open a new tab in the browser with a graphical interface (FrontEnd) with the options of:
+
 > Delete_product_operation
+
 > Insert_product_operation
+
 > Select_all_product_operation
+
 > Select_with_key_product_operation
+
 > Update_product_operation
 
 19- After choosing the insert operation for example, you must complete the values ​​inside the XML tags, such as the insert option:
