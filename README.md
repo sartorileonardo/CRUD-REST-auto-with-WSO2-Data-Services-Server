@@ -115,4 +115,3 @@ In Service Generation, select the option of "Single Service", that is a service 
 
 21- Finish !!!
 
-To download the CRUD WSO2 DSS + MySQL from this lab, go to: https://goo.gl/PqL2zm
