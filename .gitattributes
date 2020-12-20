@@ -1,0 +1,3 @@
+*.sql linguist-detectable=true
+*.xml linguist-detectable=true
+*.json linguist-detectable=true
